@@ -23,4 +23,4 @@ function readDir(dir) {
     });
   });
 }
-readDir('C:/VSC');
+readDir('clients');
