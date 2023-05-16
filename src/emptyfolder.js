@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const assert = require('assert');
 
@@ -19,7 +20,7 @@ describe('Empty File Test', function () {
   });
 });
 
-/*
+
 module.exports = {
     emptyfile
-}*/
+}
