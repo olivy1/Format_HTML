@@ -1,0 +1,23 @@
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+
+module.exports = {
+    hiddenfolder : function(){
+      describe('Hidden Folder Test', function () {
+        it('should check if a folder is a hidden folder', function () {
+          // Pfad des zu überprüfenden Ordners
+          const folderPath = 'test/testfolders/.dir_5';
+      
+          // Überprüfe, ob der Ordner existiert
+          const folderExists = fs.existsSync(folderPath);
+          assert.ok(folderExists, `Der Ordner '${folderPath}' existiert nicht.`);
+      
+          // Überprüfe, ob der Ordnername mit einem Punkt beginnt
+          const folderName = path.basename(folderPath);
+          const isHiddenFolder = folderName.startsWith('.');
+          assert.ok(isHiddenFolder, `Der Ordner '${folderPath}' ist kein versteckter Ordner.`);
+        });
+      });
+    }
+}

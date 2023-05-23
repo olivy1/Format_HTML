@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node src/index.js",
-    "test": "mocha test/test.js"
+    "test": "mocha test/src/test.js"
   },
   "author": "",
   "license": "ISC"
